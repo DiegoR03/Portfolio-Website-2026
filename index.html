@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <section id="IntroductionSection">
+            <p>Hello, I Am Diego. A Communication and Multimedia Student in Amsterdam</p>
+            <h1>Web design/development and UI/UX Design</h1>
+            <div id="quickButtons">
+                <a href="/assets/files/Diego_Ramon_CV_2026.pdf" target="_blank">Download CV</a>
+                <a href="#ContactSection">Contact</a>
+            </div>
+        </section>
+
+        <section id="AboutSection">
+            <div>
+                <h2>About me</h2>
+                <p>Hi! My name is Diego Ramon. I am a third year student at the HvA (Hogeschool van Amsterdam)</p>
+                <p>I am following the 'Communication & Multimedia Design' course at the HVA and have certainly found my
+                    place here! To this day I still have a lot of fun and motivation for it and I definitely plan to
+                    make this my profession later.</p>
+                <p>Before I joined this course, I followed a 'Game Development' course at Media College in Amsterdam,
+                    but I soon discovered that creating and designing websites was more of a profession for me. However,
+                    this did not stop me from completing the course, which actually gave me a significant head start at
+                    my current course!</p>
+                <p>Besides creating websites I have lots of hobbies, such as working out, cooking, taking photographs,
+                    gaming, and going out with my girlfriend!</p>
+            </div>
+
+        </section>
+
+        <section id="ExperienceSection">
+            <h2>Experience</h2>
+            <div id="experience-timeline">
+
+            </div>
+            <p>This is a paragraph about the experience we have.</p>
+        </section>
+
+        <section id="SkillsSection">
+            <h2>Skills</h2>
+            <div id="skills-container">
+
+            </div>
+            <p>This is a paragraph about the skills we have.</p>
+        </section>
+
+        <section id="ProjectsSection">
+            <h2>Projects</h2>
+            <div id="projects-container">
+                
+                <div class="project-card" onclick="openProject('project1')">
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag ui-ux">UI/UX Design</span>
+                            <span class="tag dev">Development</span>
+                        </div>
+                        <div class="card-info">
+                            <h3>Project Titel</h3>
+                            <p>Klik voor meer info</p> 
+                        </div>
+                        
+
+                        <template id="project1">
+                            <h2>Project Titel</h2>
+                            <p class="project-tags">UI/UX Design | Development</p>
+                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
+                                je
+                                gebruikt?</p>
+                            <img src="jouw-afbeelding.jpg" alt="Project preview">
+                        </template>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProject('project2')">
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag ui-ux">UI/UX Design</span>
+                            <span class="tag dev">Development</span>
+                        </div>
+                        <h3>Project Titel</h3>
+                        <p>Klik voor meer info</p>
+
+                        <template id="project2">
+                            <h2>Project Titel</h2>
+                            <p class="project-tags">UI/UX Design | Development</p>
+                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
+                                je
+                                gebruikt?</p>
+                            <img src="jouw-afbeelding.jpg" alt="Project preview">
+                        </template>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProject('project3')">
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag ui-ux">UI/UX Design</span>
+                            <span class="tag dev">Development</span>
+                        </div>
+                        <h3>Project Titel</h3>
+                        <p>Klik voor meer info</p>
+
+                        <template id="project3">
+                            <h2>Project Titel</h2>
+                            <p class="project-tags">UI/UX Design | Development</p>
+                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
+                                je
+                                gebruikt?</p>
+                            <img src="jouw-afbeelding.jpg" alt="Project preview">
+                        </template>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProject('project4')">
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag ui-ux">UI/UX Design</span>
+                            <span class="tag dev">Development</span>
+                        </div>
+                        <h3>Project Titel</h3>
+                        <p>Klik voor meer info</p>
+
+                        <template id="project4">
+                            <h2>Project Titel</h2>
+                            <p class="project-tags">UI/UX Design | Development</p>
+                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
+                                je
+                                gebruikt?</p>
+                            <img src="jouw-afbeelding.jpg" alt="Project preview">
+                        </template>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProject('project5')">
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag ui-ux">UI/UX Design</span>
+                            <span class="tag dev">Development</span>
+                        </div>
+                        <h3>Project Titel</h3>
+                        <p>Klik voor meer info</p>
+
+                        <template id="project5">
+                            <h2>Project Titel</h2>
+                            <p class="project-tags">UI/UX Design | Development</p>
+                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
+                                je
+                                gebruikt?</p>
+                            <img src="jouw-afbeelding.jpg" alt="Project preview">
+                        </template>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProject('project6')">
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag ui-ux">UI/UX Design</span>
+                            <span class="tag dev">Development</span>
+                        </div>
+                        <h3>Project Titel</h3>
+                        <p>Klik voor meer info</p>
+
+                        <template id="project6">
+                            <h2>Project Titel</h2>
+                            <p class="project-tags">UI/UX Design | Development</p>
+                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
+                                je
+                                gebruikt?</p>
+                            <img src="jouw-afbeelding.jpg" alt="Project preview">
+                        </template>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProject('project7')">
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag ui-ux">UI/UX Design</span>
+                            <span class="tag dev">Development</span>
+                        </div>
+                        <h3>Project Titel</h3>
+                        <p>Klik voor meer info</p>
+
+                        <template id="project7">
+                            <h2>Project Titel</h2>
+                            <p class="project-tags">UI/UX Design | Development</p>
+                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
+                                je
+                                gebruikt?</p>
+                            <img src="jouw-afbeelding.jpg" alt="Project preview">
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeModal()">&times;</span>
+                    <div id="modal-body"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="js/index.js"></script>
+    <script src="js/particles.js"></script>
+</body>
+
+</html>
