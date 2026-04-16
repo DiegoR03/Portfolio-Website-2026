@@ -20,6 +20,7 @@ body.light-mode {
     --text-color: #000000;
     --background-color: 250, 250, 250;
     --footer-background-color: 239, 239, 239;
+    --border-color: #0000004b;
     --particle-color: #202020;
     --background-dot-color: #0000003f;
     --secondary-color: #f0f0f0;
