@@ -27,38 +27,64 @@ document.querySelectorAll('li > a').forEach(btn => {
 document.addEventListener('DOMContentLoaded', () => {
     const h1 = document.querySelector('h1');
     if (h1) {
-        const originalOverflow = h1.style.overflow;
-        const fullWidth = h1.scrollWidth - parseFloat(getComputedStyle(h1).paddingLeft) - parseFloat(getComputedStyle(h1).paddingRight);
-        const textLength = h1.textContent.length;
+        const text = h1.textContent;
+        h1.textContent = ''; 
 
-        h1.style.overflow = 'visible';
-        h1.style.width = 'auto';
-        h1.style.overflow = originalOverflow;
-        h1.style.width = '0';
-        h1.style.setProperty('--typing-width', fullWidth + 'px');
-        h1.style.setProperty('--typing-steps', textLength);
+        text.split('').forEach((char, index) => {
+            const span = document.createElement('span');
+            span.textContent = char;
+            span.style.opacity = '0';
+            h1.appendChild(span);
+
+            setTimeout(() => {
+                const prev = h1.querySelector('[data-current="true"]');
+                if (prev) prev.removeAttribute('data-current');
+                span.style.opacity = '1';
+                span.setAttribute('data-current', 'true');
+            }, index * 50);
+        });
     }
 });
 
-function openProject(projectId) {
-    const modal = document.getElementById('project-modal');
-    const modalBody = document.getElementById('modal-body');
-    const template = document.getElementById(projectId);
+// MARK: Cursor
+const dot = document.getElementById("cursor-dot");
+const ring = document.getElementById("cursor-ring");
+
+let mouseX = 0, mouseY = 0;
+let ringX = 0, ringY = 0;
+
+window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
     
-    // Kopieer de inhoud van de template naar de modal
-    modalBody.innerHTML = template.innerHTML;
-    
-    modal.style.display = "block";
+    dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+});
+
+function animate() {
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+
+    ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+    requestAnimationFrame(animate);
 }
 
-function closeModal() {
-    document.getElementById('project-modal').style.display = "none";
-}
+// Start de animatie-loop
+animate();
 
-// Sluit de modal als je buiten het venster klikt
-window.onclick = function(event) {
-    const modal = document.getElementById('project-modal');
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+const interactiveElements = document.querySelectorAll('a, button, .project-card, input[type=submit]');
+
+interactiveElements.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+        ring.classList.add("hover");
+    });
+    el.addEventListener("mouseleave", () => {
+        ring.classList.remove("hover");
+    });
+});
+
+// MARK: Nav
+function navResize() {
+    const navList = document.querySelector("nav ul");
+    const isOpen = navList.getAttribute("data-responsive") === "true";
+    navList.setAttribute("data-responsive", isOpen ? "false" : "true");
 }

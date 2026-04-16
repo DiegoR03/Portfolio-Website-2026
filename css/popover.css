@@ -1,0 +1,157 @@
+/* MARK: Projects Styling */
+#projects-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    border-radius: 12px;
+    width: 88%;
+}
+
+#project-card {
+    background-color: #000000;
+    display: grid;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem;
+
+    img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        z-index: 1;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+
+        &:hover {
+            transform: scale(1.02);
+            filter: brightness(0.8);
+            opacity: 0.3;
+        }
+    }
+}
+
+#project-popover {
+    border-style: none;
+    position: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(var(--background-color), 0.6);
+    backdrop-filter: blur(5px);
+    color: var(--text-color);
+
+    #popover-body {
+        padding: 3rem 8rem;
+        display: grid;
+        grid-template-areas:
+            "title title title"
+            "image image info"
+            "image2 image2 info";
+        gap: 2rem;
+
+        h2 {
+            grid-area: title;
+        }
+
+        img {
+            width: 42vw;
+            height: 38vh;
+            object-fit: cover;
+            grid-area: image;
+            border-radius: 1rem;
+            ;
+        }
+
+        #project-info-container {
+            grid-area: info;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        p {
+            position: relative;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+         img:nth-of-type(1) {
+            grid-area: image;
+        }
+
+        img:nth-of-type(2) {
+            grid-area: image2;
+        }
+    }
+}
+@media (max-width: 768px) {
+    #project-popover {
+        display: flex;
+
+        #popover-body {
+            grid-template-areas:
+                "title title"
+                "info info"
+                "image image2"
+                ;
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.card-info {
+    opacity: 1;
+    background-color: transparent;
+    position: relative;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.tags {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    gap: 5px;
+}
+
+.tag {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+.ui-ux {
+    background-color: var(--sub-color);
+}
+
+.dev {
+    background-color: #2f3542;
+}
+
+#close-popover-btn {
+    position: fixed;
+    right: 1rem;
+    bottom: 3rem;
+    background: var(--sub-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}

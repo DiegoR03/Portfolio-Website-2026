@@ -1,0 +1,59 @@
+{
+  "timeline": [
+    {
+      "year": "2019",
+      "side": "left",
+      "title": "Game Development",
+      "description": "My first course was a MBO game development course. I followed this course at Media College in Amsterdam."
+    },
+    {
+      "year": "2022",
+      "side": "right",
+      "title": "Internship CaptainVR",
+      "description": "This was my first internship for my Game Development course. Within this company I worked on multiple VR Games which purposed served for overcoming fears and phobias."
+    },
+    {
+      "year": "2023",
+      "side": "left",
+      "title": "Internship XRLab",
+      "description": "This was me second internship for my Game Development course. Within this company I worked together with a team of more that 25 people to create Augmented Reality and Extended Reality Games for both clients and the company XRLab itself."
+    },
+    {
+      "year": "2023",
+      "side": "right",
+      "title": "Completed Game development",
+      "description": "I managed to achieve my diploma for Game Development at the Media College in Amsterdam after completing my final assignment where I made a game for the KM (Koninklijke Marine)."
+    },
+    {
+      "year": "2023",
+      "side": "left",
+      "title": "Communication & Multimedia Design",
+      "description": "I started my second course which is an HBO course called Communication & Multimedia Design at the Hogeschool van Amsterdam."
+    },
+    {
+      "year": "2024",
+      "side": "right",
+      "title": "Propaedeutic Achieved (Cumlaude)",
+      "description": "A year into my Communication & Multimedia Design course I managed to achieve my propaedeutic diploma with a cumlaude distinction (An average score of 8 or higher)."
+    }
+    ,
+    {
+      "year": "2025",
+      "side": "left",
+      "title": "Minor Service Design",
+      "description": "In my third year of my Communication & Multimedia Design course I followed a minor called Service Design. This minor is focused on learning how to design and improve services for users."
+    },
+    {
+      "year": "2026",
+      "side": "right",
+      "title": "Minor Web Development",
+      "description": "In the second half of my third year of my Communication & Multimedia Design course I followed a minor called Web Development. This minor is focused on learning how to design and develop websites and web applications."
+    },
+    {
+      "year": "2026",
+      "side": "left",
+      "title": "Smashing Conference Amsterdam",
+      "description": "While following the Web Development minor I had the oppurtunity to attend the Smashing Conference in Amsterdam. This conference is focused on web development and design and is attended by professionals from all over the world."
+    }
+  ]
+}

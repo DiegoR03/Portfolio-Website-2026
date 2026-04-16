@@ -1,0 +1,147 @@
+#experience-timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#timeline-path {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#timeline-line {
+    background: #ccc;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#timeline-fill {
+    background: var(--sub-color, orange);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.timeline-columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;;
+}
+
+.timeline-col {
+    width: 45%;
+}
+
+.timeline-col.right {
+    margin-top: 100px;
+}
+
+.timeline-item {
+    margin-bottom: 100px;
+    padding: 2rem;
+    border-radius: 5px;
+    border: var(--particle-color) 2px solid;
+    position: relative;
+}
+
+.left .timeline-item {
+    text-align: right;
+}
+
+.right .timeline-item {
+    text-align: left;
+}
+
+.hexa {
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    background: var(--sub-color, orange);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left .hexa {
+    right: -11.5%;
+}
+
+.right .hexa {
+    left: -11.5%;
+}
+
+.hexa:before,
+.hexa:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+.hexa:before {
+    border-bottom: 4px solid var(--sub-color);
+    top: -4px;
+}
+
+.hexa:after {
+    border-top: 4px solid var(--sub-color);
+    bottom: -4px;
+}
+
+.flag-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .time {
+        background-color: var(--sub-color);
+        padding: 0.1rem 1rem;
+        border-radius: 5px;
+    }
+
+    .flag {
+        border: var(--particle-color) 2px solid;
+        padding: 0.1rem 1rem;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-columns {
+        flex-direction: column;
+    }
+
+    .timeline-col {
+        width: 100%;
+        margin-top: 0 !important;
+        padding-left: 40px;
+    }
+
+    #timeline-path {
+        left: 20px;
+        transform: none;
+    }
+
+    .left .timeline-item {
+        text-align: left;
+    }
+
+    .left .hexa,
+    .right .hexa {
+        left: -28px;
+        right: auto;
+        top: 15px;
+    }
+}

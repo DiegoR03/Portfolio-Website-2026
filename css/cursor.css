@@ -1,0 +1,40 @@
+/* From: https://youtu.be/0M09ogCaExc?si=6N5zxIM_WohODOK3 */
+#cursor-dot {
+    position: fixed;
+    top: 0; left: 0;
+    width: 6px; height: 6px;
+    background: var(--sub-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+}
+
+#cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    width: 36px; height: 36px;
+    border: 1.5px solid var(--sub-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transition: width 0.25s, height 0.25s, opacity 0.25s;
+    opacity: 0.5;
+}
+
+#cursor-ring.hover {
+    width: 60px;
+    height: 60px;
+    opacity: 0.2;
+    background: var(--sub-color);
+}
+
+
+@media (pointer: fine) {
+    body, a, button, .project-card, input[type=submit], img { 
+        cursor: none !important; 
+    }
+}
+
+@media (pointer: coarse) {
+    #cursor-dot, #cursor-ring { display: none; }
+}

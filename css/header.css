@@ -1,0 +1,139 @@
+/* MARK: Navigation */
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #00000060;
+    color: var(--text-color);
+    z-index: 10;
+    font-family: SpaceGrotesk, sans-serif;
+
+    #nav-container{
+        width: 88%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #logo-container{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 3rem;
+            height: 2rem;
+        }
+
+        h2 {
+            justify-self: left;
+            font-size: 1rem;
+            padding: 1rem;
+            width: fit-content;
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+
+        li {
+            a {
+                color: var(--text-color);
+                text-decoration: none;
+                font-size: 1.2rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .icon {
+            display: none; 
+            color: var(--text-color);
+            font-size: 1.5rem;
+            text-decoration: none;
+            width: 3rem;
+            height: 3rem;
+        }
+
+    #darkModeToggleButton{
+        width: 3rem;
+            height: 3rem;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    nav ul {
+        display: none;
+    }
+
+    nav .icon {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span{
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+    }
+
+    nav div {
+        flex-direction: row !important;
+        justify-content: space-between;
+        align-items: center;
+        width: 92%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--background-color);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding: 5rem 2rem;
+        transition: 0.4s ease;
+        z-index: 11;
+        gap: 1.5rem;
+    }
+
+    nav ul[data-responsive="true"] {
+        right: 0;
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    nav .icon {
+        display: flex;
+        z-index: 12; /* Boven het menu */
+        justify-content: center;
+        align-items: center;
+    }
+}

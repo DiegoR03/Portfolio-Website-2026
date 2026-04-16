@@ -53,7 +53,6 @@ ParticleNetwork.prototype.init = function() {
     this.canvas.width = this.element.offsetWidth;
     this.canvas.height = this.element.offsetHeight;
     
-    this.applyStyles(this.element, { position: 'relative' });
     this.applyStyles(this.canvas, { position: 'absolute', top: 0, left: 0, zIndex: -1, pointerEvents: 'none' });
 
     window.addEventListener('resize', function() {
@@ -133,13 +132,43 @@ ParticleNetwork.prototype.applyStyles = function(el, styles) {
     }
 };
 
-// --- Initialisatie ---
-const canvasDiv = document.getElementById('IntroductionSection');
-const options = {
-    particleColor: '#cecece',
+
+const particleContainer = document.getElementById('particle-canvas-container');
+
+function getParticleColor() {
+    const style = getComputedStyle(document.body);
+    return style.getPropertyValue('--particle-color').trim();
+}
+
+// MARKL: Dark Mode Toggle
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+
+    let darkModeToggleButton = document.getElementById('darkModeToggleButton');
+
+    if (document.body.classList.contains('dark-mode')) {
+        darkModeToggleButton.innerHTML = "𖤓";
+    } else {
+        darkModeToggleButton.innerHTML = "⏾";
+    }
+    
+    particleContainer.innerHTML = ''; 
+
+    const newOptions = {
+        particleColor: getParticleColor(),
+        interactive: true,
+        speed: 'medium',
+        density: 'high'
+    };
+
+    new ParticleNetwork(particleContainer, newOptions);
+}
+
+let currentOptions = {
+    particleColor: getParticleColor(),
     interactive: true,
     speed: 'medium',
     density: 'high'
 };
 
-new ParticleNetwork(canvasDiv, options);
+new ParticleNetwork(particleContainer, currentOptions);

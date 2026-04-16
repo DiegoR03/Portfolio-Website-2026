@@ -4,14 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/LogoDR.png">
+    <title>Diego Ramon - Portfolio</title>
 </head>
 
 <body>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
     <div id="header-placeholder"></div>
     <main>
         <section id="IntroductionSection">
+            <div id="particle-canvas-container"></div>
+
             <p>Hello, I Am Diego. A Communication and Multimedia Student in Amsterdam</p>
             <h1>Web design/development and UI/UX Design</h1>
             <div id="quickButtons">
@@ -37,181 +43,96 @@
 
         </section>
 
-        <section id="ExperienceSection">
-            <h2>Experience</h2>
-            <div id="experience-timeline">
+<section id="ExperienceSection">
+    <h2>Experience</h2>
+    <div id="experience-timeline">
+        <div id="timeline-path">
+            <div id="timeline-line"></div>
+            <div id="timeline-fill"></div>
+        </div>
 
+        <div class="timeline-columns">
+            <div class="timeline-col left">
+                
             </div>
-            <p>This is a paragraph about the experience we have.</p>
-        </section>
+
+            <div class="timeline-col right">
+                
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="SkillsSection">
             <h2>Skills</h2>
             <div id="skills-container">
-
+                <div>
+                    <img src="https://www.logobird.com/wp-content/uploads/2011/01/New-HTML5_Logo.png" alt="HTML5 Icon">
+                    <h3>HTML5</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <div>
+                    <img src="https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png" alt="CSS3 Icon">
+                    <h3>CSS3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <div>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-javascript-logo-icon-svg-download-png-2284965.png?f=webp" alt="JS Icon">
+                    <h3>Javascript</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <div>
+                    <img src="https://images.icon-icons.com/2429/PNG/512/figma_logo_icon_147289.png" alt="Figma Icon">
+                    <h3>Figma</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <div>
+                    <img src="https://images.icon-icons.com/2407/PNG/512/adobe_icon_146235.png" alt="AAdobe Icon">
+                    <h3>Adobe Suite</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <div>
+                    <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/399/square_480/astro-logo_2.png" alt="Astro Icon">
+                    <h3>Astro</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/250px-JSON_vector_logo.svg.png?_=20220501073649" alt="JSON Icon">
+                    <h3>JSON</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <div>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-nodejs-icon-svg-download-png-226035.png" alt="Node.js Icon">
+                    <h3>Node.js</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
+                <div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon">
+                    <h3>GitHub</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                </div>
             </div>
-            <p>This is a paragraph about the skills we have.</p>
         </section>
 
         <section id="ProjectsSection">
             <h2>Projects</h2>
             <div id="projects-container">
-                
-                <div class="project-card" onclick="openProject('project1')">
-                    <div class="card-content">
-                        <div class="tags">
-                            <span class="tag ui-ux">UI/UX Design</span>
-                            <span class="tag dev">Development</span>
-                        </div>
-                        <div class="card-info">
-                            <h3>Project Titel</h3>
-                            <p>Klik voor meer info</p> 
-                        </div>
-                        
-
-                        <template id="project1">
-                            <h2>Project Titel</h2>
-                            <p class="project-tags">UI/UX Design | Development</p>
-                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
-                                je
-                                gebruikt?</p>
-                            <img src="jouw-afbeelding.jpg" alt="Project preview">
-                        </template>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="openProject('project2')">
-                    <div class="card-content">
-                        <div class="tags">
-                            <span class="tag ui-ux">UI/UX Design</span>
-                            <span class="tag dev">Development</span>
-                        </div>
-                        <h3>Project Titel</h3>
-                        <p>Klik voor meer info</p>
-
-                        <template id="project2">
-                            <h2>Project Titel</h2>
-                            <p class="project-tags">UI/UX Design | Development</p>
-                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
-                                je
-                                gebruikt?</p>
-                            <img src="jouw-afbeelding.jpg" alt="Project preview">
-                        </template>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="openProject('project3')">
-                    <div class="card-content">
-                        <div class="tags">
-                            <span class="tag ui-ux">UI/UX Design</span>
-                            <span class="tag dev">Development</span>
-                        </div>
-                        <h3>Project Titel</h3>
-                        <p>Klik voor meer info</p>
-
-                        <template id="project3">
-                            <h2>Project Titel</h2>
-                            <p class="project-tags">UI/UX Design | Development</p>
-                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
-                                je
-                                gebruikt?</p>
-                            <img src="jouw-afbeelding.jpg" alt="Project preview">
-                        </template>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="openProject('project4')">
-                    <div class="card-content">
-                        <div class="tags">
-                            <span class="tag ui-ux">UI/UX Design</span>
-                            <span class="tag dev">Development</span>
-                        </div>
-                        <h3>Project Titel</h3>
-                        <p>Klik voor meer info</p>
-
-                        <template id="project4">
-                            <h2>Project Titel</h2>
-                            <p class="project-tags">UI/UX Design | Development</p>
-                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
-                                je
-                                gebruikt?</p>
-                            <img src="jouw-afbeelding.jpg" alt="Project preview">
-                        </template>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="openProject('project5')">
-                    <div class="card-content">
-                        <div class="tags">
-                            <span class="tag ui-ux">UI/UX Design</span>
-                            <span class="tag dev">Development</span>
-                        </div>
-                        <h3>Project Titel</h3>
-                        <p>Klik voor meer info</p>
-
-                        <template id="project5">
-                            <h2>Project Titel</h2>
-                            <p class="project-tags">UI/UX Design | Development</p>
-                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
-                                je
-                                gebruikt?</p>
-                            <img src="jouw-afbeelding.jpg" alt="Project preview">
-                        </template>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="openProject('project6')">
-                    <div class="card-content">
-                        <div class="tags">
-                            <span class="tag ui-ux">UI/UX Design</span>
-                            <span class="tag dev">Development</span>
-                        </div>
-                        <h3>Project Titel</h3>
-                        <p>Klik voor meer info</p>
-
-                        <template id="project6">
-                            <h2>Project Titel</h2>
-                            <p class="project-tags">UI/UX Design | Development</p>
-                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
-                                je
-                                gebruikt?</p>
-                            <img src="jouw-afbeelding.jpg" alt="Project preview">
-                        </template>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="openProject('project7')">
-                    <div class="card-content">
-                        <div class="tags">
-                            <span class="tag ui-ux">UI/UX Design</span>
-                            <span class="tag dev">Development</span>
-                        </div>
-                        <h3>Project Titel</h3>
-                        <p>Klik voor meer info</p>
-
-                        <template id="project7">
-                            <h2>Project Titel</h2>
-                            <p class="project-tags">UI/UX Design | Development</p>
-                            <p>Hier komt de uitgebreide informatie over je project. Wat heb je gedaan? Welke tools heb
-                                je
-                                gebruikt?</p>
-                            <img src="jouw-afbeelding.jpg" alt="Project preview">
-                        </template>
-                    </div>
-                </div>
             </div>
 
-            <div id="project-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close-button" onclick="closeModal()">&times;</span>
-                    <div id="modal-body"></div>
+            <div id="project-popover" popover>
+                <div id="popover-content">
+                    <button id="close-popover-btn" onclick="closeProject()">Sluiten</button>
+                    <div id="popover-body"></div>
                 </div>
             </div>
         </section>
     </main>
     <div id="footer-placeholder"></div>
+
     <script src="js/index.js"></script>
+    <script src="js/projects.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/timeline.js"></script>
 </body>
 
 </html>

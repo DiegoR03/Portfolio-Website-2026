@@ -1,0 +1,81 @@
+{
+    "projects": [
+        {
+        "title": "PetMatch",
+        "description": "We have made an interactive pet matching website where users can find or offer pets based on personal preferences. Through a matching algorithm (made with a combination of Javscript and an API), users are matched with suitable pets based on factors such as lifestyle, age, family situation, etc. This makes the adoption process more personal, efficient and user-friendly than traditional adoption sites. The platform goes further than just matching. Users can also get in touch with each other to exchange experiences or ask questions about the animal.",
+        "tags": ["UI/UX Design", "Development"],
+        "image": "../assets/img/Projects/Project-Tech.png",
+        "image2": "../assets/img/Projects/Project-Tech-2.png",
+        "date": "24/04/2025 - 23/07/2025",
+        "team": ["Diego", "Ocean", "Anna", "Xavannah"],
+        "role": "Frontend and Backend Developer",
+        "githublink": "https://github.com/DiegoR03/ProjectTech"
+        },
+        {
+        "title": "Hamster Care",
+        "description": "Hamster Care is een innovatieve mobiele applicatie die gebruikers helpt bij het verzorgen van hun hamsters. Met geavanceerde algoritmen en een gebruiksvriendelijke interface biedt Hamster Care een gepersonaliseerde ervaring, waarbij gebruikers hun voorkeuren kunnen instellen en aanbevelingen kunnen ontvangen op basis van factoren zoals ras, grootte, leeftijd en persoonlijkheid van hun hamster. Of je nu op zoek bent naar een speelse pup of een rustige senior kat, Hamster Care maakt het gemakkelijk om de ideale metgezel te vinden en te adopteren.",
+        "tags": ["UI/UX Design", "Development"],
+        "image": "../assets/img/Projects/Project-HamsterCare.png",
+        "image2": "../assets/img/Projects/Project-HamsterCare-2.png",
+        "date": "24/04/2025 - 23/07/2025",
+        "team": ["Diego", "Ocean", "Anna", "Xavannah"],
+        "role": "Frontend and Backend Developer",
+        "githublink": "https://github.com/DiegoR03/ProjectTech"
+        },
+        {
+        "title": "Rubics Cube",
+        "description": "This Rubics Cube was one of the assignments I had to cretae while following the minor Web Development and Design. While it may not seem like alot on the surface, the actual assignment was way more difficult than I thought. That is because this working rubics cube is made entirely out of HTML5 and CSS3 only. No javascript, no other languages, only CSS and HTML. While this was a very fun project, it was a very very VERY difficult one. One of the very few projects I never got to fully finish.",
+        "tags": ["UI/UX Design", "Development"],
+        "image": "../assets/img/Projects/Project-RubicsCube.png",
+        "image2": "../assets/img/Projects/Project-RubicsCube-2.png",
+        "date": "30/04/2026 - 08/05/2026",
+        "team": ["Diego"],
+        "role": "Frontend Developer",
+        "githublink": "https://github.com/DiegoR03/RubicsCube_CSS"
+        },
+        {
+        "title": "Hackathon Project",
+        "description": "Hackathon Project is een innovatieve mobiele applicatie die huisdiereigenaren helpt bij het vinden van de perfecte match voor hun geliefde huisdieren. Met geavanceerde algoritmen en een gebruiksvriendelijke interface biedt Hackathon Project een gepersonaliseerde ervaring, waarbij gebruikers hun voorkeuren kunnen instellen en aanbevelingen kunnen ontvangen op basis van factoren zoals ras, grootte, leeftijd en persoonlijkheid van hun huisdier. Of je nu op zoek bent naar een speelse pup of een rustige senior kat, Hackathon Project maakt het gemakkelijk om de ideale metgezel te vinden en te adopteren.",
+        "tags": ["UI/UX Design", "Development"],
+        "image": "../assets/img/Projects/Project-Hackaton.png",
+        "image2": "../assets/img/Projects/Project-Hackaton-2.png",
+        "date": "24/04/2025 - 23/07/2025",
+        "team": ["Diego", "Ocean", "Anna", "Xavannah"],
+        "role": "Frontend Developer",
+        "githublink": "https://github.com/DiegoR03/ProjectTech"
+        },
+        {
+        "title": "NASA Web API",
+        "description": "NASA Web API is een innovatieve mobiele applicatie die gebruikers helpt bij het verkrijgen van data van de NASA. Met geavanceerde algoritmen en een gebruiksvriendelijke interface biedt NASA Web API een gepersonaliseerde ervaring, waarbij gebruikers hun voorkeuren kunnen instellen en aanbevelingen kunnen ontvangen op basis van factoren zoals ras, grootte, leeftijd en persoonlijkheid van hun huisdier. Of je nu op zoek bent naar een speelse pup of een rustige senior kat, NASA Web API maakt het gemakkelijk om de ideale metgezel te vinden en te adopteren.",
+        "tags": ["UI/UX Design", "Development", "Work in Progress"],
+        "image": "../assets/img/Projects/Project-Tech.png",
+        "image2": "../assets/img/Projects/Project-Tech-2.png",
+        "date": "24/04/2025 - 23/07/2025",
+        "team": ["Diego", "Ocean", "Anna", "Xavannah"],
+        "role": "Frontend and Backend Developer",
+        "githublink": "https://github.com/DiegoR03/ProjectTech"
+        },
+        {
+        "title": "FED",
+        "description": "NASA Web API is een innovatieve mobiele applicatie die gebruikers helpt bij het verkrijgen van data van de NASA. Met geavanceerde algoritmen en een gebruiksvriendelijke interface biedt NASA Web API een gepersonaliseerde ervaring, waarbij gebruikers hun voorkeuren kunnen instellen en aanbevelingen kunnen ontvangen op basis van factoren zoals ras, grootte, leeftijd en persoonlijkheid van hun huisdier. Of je nu op zoek bent naar een speelse pup of een rustige senior kat, NASA Web API maakt het gemakkelijk om de ideale metgezel te vinden en te adopteren.",
+        "tags": ["UI/UX Design", "Development", "Work in Progress"],
+        "image": "../assets/img/Projects/Project-FED.png",
+        "image2": "../assets/img/Projects/Project-FED-2.png",
+        "date": "24/04/2025 - 23/07/2025",
+        "team": ["Diego"],
+        "role": "Frontend Developer",
+        "githublink": "https://github.com/DiegoR03/FED"
+        },
+        {
+        "title": "Warship",
+        "description": "NASA Web API is een innovatieve mobiele applicatie die gebruikers helpt bij het verkrijgen van data van de NASA. Met geavanceerde algoritmen en een gebruiksvriendelijke interface biedt NASA Web API een gepersonaliseerde ervaring, waarbij gebruikers hun voorkeuren kunnen instellen en aanbevelingen kunnen ontvangen op basis van factoren zoals ras, grootte, leeftijd en persoonlijkheid van hun huisdier. Of je nu op zoek bent naar een speelse pup of een rustige senior kat, NASA Web API maakt het gemakkelijk om de ideale metgezel te vinden en te adopteren.",
+        "tags": ["UI/UX Design", "Development", "Work in Progress"],
+        "image": "../assets/img/Projects/Project-Warship.png",
+        "image2": "../assets/img/Projects/Project-Warship-2.png",
+        "date": "24/04/2025 - 23/07/2025",
+        "team": ["Diego", "Ocean", "Anna", "Xavannah"],
+        "role": "Frontend and Backend Developer",
+        "githublink": "https://github.com/DiegoR03/ProjectTech"
+        }
+    ]
+}

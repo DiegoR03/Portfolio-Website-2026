@@ -1,5 +1,13 @@
 <header>
-        <nav>
+    <nav>
+        <div id="nav-container">
+            <div id="logo-container">
+                <a href="index.html">
+                    <img src="/assets/img/LogoDR.png" alt="Logo of Diego Ramon's Website. Its an abstract strcutre of the letter D and R fused into one. De R is backwards while its back it fused into the back of the letter D.">
+                </a>
+                <h2>Diego Ramon</h2>
+            </div>
+            
             <ul>
                 <li><a href="#IntroductionSection">Introduction</a></li>
                 <li><a href="#ExperienceSection">Experience</a></li>
@@ -7,5 +15,14 @@
                 <li><a href="#ProjectsSection">Projects</a></li>
                 <li><a href="#ContactSection">Contact</a></li>
             </ul>
-        </nav>
+            <div style="display: flex; align-items: center; width: auto;">
+                <button id="darkModeToggleButton" onclick="toggleDarkMode()">⏾</button>
+                <a href="javascript:void(0);" class="icon" onclick="navResize()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </nav>
 </header>
