@@ -148,10 +148,10 @@ function toggleLightMode() {
 
     if (document.body.classList.contains('light-mode')) {
         lightModeToggleButton.innerHTML = "𖤓";
-        document.getElementById('Logo').src = "../assets/img/LogoDR-Dark.png";
+        document.getElementById('Logo').src = "./assets/img/LogoDR-Dark.png";
     } else {
         lightModeToggleButton.innerHTML = "⏾";
-        document.getElementById('Logo').src = "../assets/img/LogoDR.png";
+        document.getElementById('Logo').src = "./assets/img/LogoDR.png";
     }
     
     particleContainer.innerHTML = ''; 
