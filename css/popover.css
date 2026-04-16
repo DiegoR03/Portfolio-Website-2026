@@ -1,31 +1,42 @@
 /* MARK: Projects Styling */
+#ProjectsSection{
+    #firstP{
+        width: 40%;
+    }
+}
 #projects-container {
     display: flex;
     flex-direction: column;
     margin: 1rem;
     border-radius: 12px;
     width: 88%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 #project-card {
-    background-color: #000000;
+    background-color: var(--background-color);
     display: grid;
     align-items: flex-end;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
     padding: 4rem;
+    transition: border 0.3s ease;
+
+     &:hover {
+        border-left: var(--sub-color) 5px solid;
+     }
 
     img {
         position: absolute;
         height: 100%;
         width: 100%;
         object-fit: cover;
-        transition: transform 0.3s ease;
+        transition: transform 0.6s ease, opacity 0.6s ease;
         z-index: 1;
-        transition: opacity 0.3s ease;
+
         opacity: 0;
 
         &:hover {
@@ -93,9 +104,9 @@
     }
 }
 @media (max-width: 768px) {
-    #project-popover {
+    #project-popover:popover-open {
         display: flex;
-
+        
         #popover-body {
             grid-template-areas:
                 "title title"
@@ -118,28 +129,34 @@
     z-index: 3;
 }
 
-.tags {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    display: flex;
-    gap: 5px;
+#tags {
+    margin: 1rem;
 }
 
 .tag {
     font-size: 0.7rem;
     padding: 4px 8px;
+    margin: 0 0.5rem;
     border-radius: 4px;
     color: white;
     font-weight: bold;
-}
-
-.ui-ux {
-    background-color: var(--sub-color);
-}
-
-.dev {
     background-color: #2f3542;
+}
+
+.tag[data-tagtype="development"] {
+    background-color: #008337;
+}
+
+.tag[data-tagtype="ui/ux design"] {
+    background-color: #f500e0;
+}
+
+.tag[data-tagtype="work in progress"] {
+    background-color: #1e90ff;
+}
+
+.tag[data-tagtype="game development"] {
+    background-color: #c58001;
 }
 
 #close-popover-btn {

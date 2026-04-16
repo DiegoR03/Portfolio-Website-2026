@@ -68,7 +68,6 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Start de animatie-loop
 animate();
 
 const interactiveElements = document.querySelectorAll('a, button, .project-card, input[type=submit]');
@@ -87,4 +86,26 @@ function navResize() {
     const navList = document.querySelector("nav ul");
     const isOpen = navList.getAttribute("data-responsive") === "true";
     navList.setAttribute("data-responsive", isOpen ? "false" : "true");
+}
+
+// MARK: Footer
+function sendMail() {
+    var firstName = document.getElementById('fname').value;
+    var lastName = document.getElementById('lname').value;
+    var subjectText = document.getElementById('subject').value;
+    var messageText = document.getElementById('message').value;
+    var emailRecipient = "Diegoramon@live.nl";
+    var emailSubject = subjectText || "Contact";
+    var emailBody = "Goedendag,\n\n" 
+        + messageText + "\n\n" 
+        + "Met vriendelijke groet,\n" 
+        + firstName + " " + lastName;
+
+    window.location.href = "mailto:" + emailRecipient 
+        + "?subject=" + encodeURIComponent(emailSubject) 
+        + "&body=" + encodeURIComponent(emailBody);
+
+    setTimeout(function() {
+        window.location.href = "index.html";
+    }, 500);
 }

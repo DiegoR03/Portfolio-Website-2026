@@ -35,23 +35,29 @@
       "side": "right",
       "title": "Propaedeutic Achieved (Cumlaude)",
       "description": "A year into my Communication & Multimedia Design course I managed to achieve my propaedeutic diploma with a cumlaude distinction (An average score of 8 or higher)."
+    },
+    {
+      "year": "2025",
+      "side": "left",
+      "title": "Internship GuestCompass",
+      "description": "In my second year of my Communication & Multimedia Design course I had my first intership at a company called GuestCompass. My role as internship was a UX/UI designer. I was responsible for creating new website designs, thinking of new functions, but also editing videos and even recording some! I learned alot at this intership."
     }
     ,
     {
       "year": "2025",
-      "side": "left",
+      "side": "right",
       "title": "Minor Service Design",
       "description": "In my third year of my Communication & Multimedia Design course I followed a minor called Service Design. This minor is focused on learning how to design and improve services for users."
     },
     {
       "year": "2026",
-      "side": "right",
+      "side": "left",
       "title": "Minor Web Development",
       "description": "In the second half of my third year of my Communication & Multimedia Design course I followed a minor called Web Development. This minor is focused on learning how to design and develop websites and web applications."
     },
     {
       "year": "2026",
-      "side": "left",
+      "side": "right",
       "title": "Smashing Conference Amsterdam",
       "description": "While following the Web Development minor I had the oppurtunity to attend the Smashing Conference in Amsterdam. This conference is focused on web development and design and is attended by professionals from all over the world."
     }

@@ -1,3 +1,13 @@
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
 let projectData = [];
 
 async function laadProjecten() {
@@ -10,12 +20,15 @@ async function laadProjecten() {
         container.innerHTML = ""; // Container leegmaken voor de zekerheid
 
         projectData.forEach((project, index) => {
-            const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            const tagsHTML = project.tags.map(tag => {
+                const cleanTag = tag.toLowerCase().trim();
+                return `<span class="tag" data-tagtype="${cleanTag}">${tag}</span>`;
+            }).join('');
 
             const cardHTML = `
                 <div id="project-card" onclick="openProject(${index})">
                     <div id="content-${index}">
-                        <div id="tags-${index}">${tagsHTML}</div>
+                        <div id="tags">${tagsHTML}</div>
                         <div id="info-${index}">
                             <h3>${project.title}</h3>
                             <p>Klik voor meer info</p>
@@ -35,20 +48,19 @@ function openProject(index) {
     const project = projectData[index];
     const popover = document.getElementById('project-popover');
     const body = document.getElementById('popover-body');
-    
-    // De cursor elementen opzoeken
+
     const dot = document.getElementById('cursor-dot');
     const ring = document.getElementById('cursor-ring');
 
     popover.addEventListener('beforetoggle', (event) => {
-    if (event.newState === 'open') {
-        popover.appendChild(dot);
-        popover.appendChild(ring);
-    } else {
-        document.body.appendChild(dot);
-        document.body.appendChild(ring);
-    }
-});
+        if (event.newState === 'open') {
+            popover.appendChild(dot);
+            popover.appendChild(ring);
+        } else {
+            document.body.appendChild(dot);
+            document.body.appendChild(ring);
+        }
+    });
 
     body.innerHTML = `
         <h2>${project.title}</h2>
@@ -58,6 +70,7 @@ function openProject(index) {
             <p><strong>Team:</strong> ${project.team.join(', ')}</p>
             <p><strong>Rol:</strong> ${project.role}</p>
             <p>Github Link: <a href="${project.githublink}" target="_blank">Klik hier</a></p>
+            <p>Website Link: <a href="${project.website}" target="_blank">Klik hier</a></p>
         </div>
         <img src="${project.image}" alt="${project.title}">
         <img src="${project.image2}" alt="${project.title}">

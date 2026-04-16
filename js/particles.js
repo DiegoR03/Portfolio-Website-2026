@@ -140,16 +140,18 @@ function getParticleColor() {
     return style.getPropertyValue('--particle-color').trim();
 }
 
-// MARKL: Dark Mode Toggle
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
+// MARKL: Light Mode Toggle
+function toggleLightMode() {
+    document.body.classList.toggle('light-mode');
 
-    let darkModeToggleButton = document.getElementById('darkModeToggleButton');
+    let lightModeToggleButton = document.getElementById('lightModeToggleButton');
 
-    if (document.body.classList.contains('dark-mode')) {
-        darkModeToggleButton.innerHTML = "𖤓";
+    if (document.body.classList.contains('light-mode')) {
+        lightModeToggleButton.innerHTML = "𖤓";
+        document.getElementById('Logo').src = "../assets/img/LogoDR-Dark.png";
     } else {
-        darkModeToggleButton.innerHTML = "⏾";
+        lightModeToggleButton.innerHTML = "⏾";
+        document.getElementById('Logo').src = "../assets/img/LogoDR.png";
     }
     
     particleContainer.innerHTML = ''; 

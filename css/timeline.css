@@ -50,7 +50,7 @@
     margin-bottom: 100px;
     padding: 2rem;
     border-radius: 5px;
-    border: var(--particle-color) 2px solid;
+    border: var(--border-color) 2px solid;
     position: relative;
 }
 
@@ -116,6 +116,10 @@
         padding: 0.1rem 1rem;
         border-radius: 5px;
     }
+}
+
+.desc{
+    padding: 1rem;
 }
 
 @media (max-width: 768px) {
