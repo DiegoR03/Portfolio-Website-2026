@@ -140,6 +140,7 @@
 
     .left .timeline-item {
         text-align: left;
+            padding: 0;
     }
 
     .left .hexa,

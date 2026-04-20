@@ -71,6 +71,7 @@ h1 {
     margin: 0 auto;
     white-space: normal;
     line-height: 1.4;
+    font-size: clamp(1.2rem, 6vw, 3rem);
 
     span {
         display: inline-block;
@@ -87,7 +88,7 @@ h1 {
 
 
 h2 {
-    font-size: 3rem;
+    font-size: clamp(1.2rem, 6vw, 3rem);
 }
 
 /* MARK: Section Styling */
@@ -101,16 +102,18 @@ section {
     background-color: rgba(var(--background-color));
     color: var(--text-color);
     z-index: 2;
-    padding: 3rem 6rem 0 6rem;
+    padding: clamp(1rem, 4vw, 3rem) clamp(0.75rem, 6vw, 6rem) 0 clamp(0.75rem, 6vw, 6rem);
     scroll-margin-top: 40px;
 }
 
 #quickButtons {
     display: flex;
-    gap: 1rem;
+    gap: clamp(0.4rem, 2vw, 1rem);
+    flex-wrap: wrap;
+    justify-content: center;
 
     a {
-        padding: 0.5rem 1rem;
+        padding: clamp(0.3rem, 1.5vw, 0.5rem) clamp(0.6rem, 2.5vw, 1rem);
         background-color: transparent;
         color: var(--text-color);
         border-style: solid;
@@ -118,7 +121,7 @@ section {
         text-decoration: none;
         border-radius: 5px;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: clamp(0.85rem, 2.5vw, 1.2rem);
 
         &:hover {
             background-color: #ddd;
@@ -136,16 +139,16 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: clamp(0.8rem, 3vw, 2rem);
     position: relative;
     overflow: hidden;
 
     p {
-        font-size: 1.5rem;
+        font-size: clamp(0.9rem, 3.5vw, 1.5rem);
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: clamp(1.2rem, 6vw, 3rem);
     }
 }
 
@@ -169,24 +172,25 @@ section {
 
     div {
         grid-column: 2;
-        margin-left: 5rem;
-        padding-left: 1rem;
+        margin-left: clamp(0.5rem, 4vw, 5rem);
+        padding-left: clamp(0.5rem, 2vw, 1rem);
         border-left: var(--sub-color) 1px solid;
     }
 
     p {
-        font-size: 1.3rem;
-        padding-top: 1rem;
+        font-size: clamp(0.9rem, 3.5vw, 1.3rem);
+        padding-top: clamp(0.5rem, 2vw, 1rem);
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: clamp(1.2rem, 6vw, 3rem);
         text-decoration: underline;
     }
 
     img {
         align-self: center;
         border-radius: 5px;
+        width: 80%;
     }
 }
 
@@ -194,30 +198,30 @@ section {
 #skills-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    padding: 1rem;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 90vw, 450px), 1fr));
+    padding: clamp(0.5rem, 2vw, 1rem);
+    gap: clamp(1rem, 2vw, 20px);
     align-items: center;
     justify-content: center;
     text-align: center;
 
     div {
-        margin: 3rem;
+        margin: clamp(0.8rem, 2vw, 3rem);
     }
 
     h3 {
-        font-size: 1.35rem;
-        margin: 1rem;
+        font-size: clamp(0.95rem, 3vw, 1.35rem);
+        margin: clamp(0.4rem, 1.5vw, 1rem);
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: clamp(0.85rem, 2.5vw, 1.2rem);
         width: 100%
     }
 
     img {
-        width: 10rem;
-        height: 10rem;
+        width: clamp(5rem, 18vw, 10rem);
+        height: clamp(5rem, 18vw, 10rem);
         padding: 6px;
         object-fit: cover;
         background-color: white;
@@ -228,7 +232,7 @@ section {
 
 /* MARK: Qualities section */
 #qualitiesGrid{
-    width: 90%;
+    width: clamp(85%, 95vw, 90%);
 
     display: flex;
     flex-direction: row;
@@ -236,16 +240,16 @@ section {
     align-content: space-between;
     justify-content: flex-start;
 
-    margin-top: 2rem;
-    padding: 1rem;
-    gap: 3rem;
+    margin-top: clamp(0.8rem, 2vw, 2rem);
+    padding: clamp(0.4rem, 1.5vw, 1rem);
+    gap: clamp(1rem, 2vw, 3rem);
 
     div{
         border: var(--border-color) 1px solid;
-        padding: 1rem;
+        padding: clamp(0.6rem, 1.5vw, 1rem);
         border-radius: 10px;
         flex: 1 1 calc(33.33% - 2rem); 
-        min-width: 300px;
+        min-width: clamp(180px, 85vw, 300px);
         height: auto;
         display: flex;
         flex-direction: column;
@@ -258,23 +262,29 @@ section {
         }
 
         img, h3, p, span {
-            padding: 0.5rem;
+            padding: clamp(0.2rem, 1vw, 0.5rem);
         }
 
         img{
-            width: 3rem;
-            height: 3rem;
+            width: clamp(2rem, 5vw, 3rem);
+            height: clamp(2rem, 5vw, 3rem);
             background-color: var(--sub-color);
             border-radius: 5px;
         }
 
+        h3 {
+            font-size: clamp(0.85rem, 2.5vw, 1.2rem);
+        }
+
         p{
+            font-size: clamp(0.8rem, 2vw, 1rem);
             opacity: 0.6;
             flex-grow: 1;
         }
 
         span {
-            margin-top: 1rem; 
+            font-size: clamp(0.75rem, 1.8vw, 0.95rem);
+            margin-top: clamp(0.4rem, 1vw, 1rem); 
         }
     }
 
@@ -316,46 +326,38 @@ section {
 }
 
 
-/* MARK: Media Queries */
-@media (max-width: 1032px) {
-    footer {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
-
-    div p {
-        margin: 0;
-    }
-
-    section:not(:first-of-type) {
-        padding: 10rem 3rem 0 3rem;
-    }
-
+/* MARK: Media Queries - Layout adjustments only */
+@media (max-width: 1080px) {
     #AboutSection {
-        text-align: left;
-        display: flex;
         flex-direction: column;
 
         div {
-            margin-top: 3rem;
+            margin-top: clamp(1rem, 2vw, 3rem);
             margin-left: 0;
-            padding-left: 1rem;
+            padding-left: clamp(0.4rem, 1.5vw, 1rem);
             border-left: var(--sub-color) 1px solid;
         }
+    }
 
-        p {
-            font-size: 1.3rem;
-            padding-top: 1rem;
+    #qualitiesGrid {
+        div {
+            flex: 1 1 calc(50% - 1rem);
+            min-width: clamp(160px, 80vw, 300px);
         }
+    }
+}
 
-        h2 {
-            font-size: 3rem;
-            text-decoration: underline;
-        }
+@media (max-width: 550px) {
+    #qualitiesGrid {
+        gap: clamp(0.8rem, 1.5vw, 1.5rem);
 
-        img {
-            align-self: center;
+        div {
+            flex: 1 1 100%;
+            min-width: clamp(160px, 95vw, 100%);
         }
+    }
+
+    #skills-container {
+        grid-template-columns: 1fr;
     }
 }
