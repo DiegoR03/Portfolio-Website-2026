@@ -54,9 +54,11 @@ function openProject(index) {
 
     popover.addEventListener('beforetoggle', (event) => {
         if (event.newState === 'open') {
+            document.documentElement.style.overflow = 'hidden';
             popover.appendChild(dot);
             popover.appendChild(ring);
         } else {
+            document.documentElement.style.overflow = '';
             document.body.appendChild(dot);
             document.body.appendChild(ring);
         }
