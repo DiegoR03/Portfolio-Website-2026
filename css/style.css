@@ -63,7 +63,7 @@ body.light-mode {
 /* MARK: Font Definitions */
 @font-face {
     font-family: SpaceGrotesk;
-    src: url(/assets/fonts/SpaceGrotesk.ttf) format("truetype");
+    src: url(../assets/fonts/SpaceGrotesk.ttf) format("truetype");
 }
 
 h1 {
